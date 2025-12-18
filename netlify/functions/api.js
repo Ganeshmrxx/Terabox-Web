@@ -103,6 +103,7 @@ async function getFileInfo(link, event, cookie) {
 
     response = await fetch(`https://www.1024terabox.com/share/list?${params}`, { headers });
     const data = await response.json();
+    console.log(data)
 
     if (!data || !data.list || !data.list.length || data.errno) {
       console.error("API error:", data.errno, data.errmsg);
