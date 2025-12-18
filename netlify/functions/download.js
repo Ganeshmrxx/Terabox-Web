@@ -105,7 +105,7 @@ async function getFileInfo(link, event, cookie) {
       thumbnail: fileInfo.thumbs?.url3 || "",
       file_size: getSize(parseInt(fileInfo.size || 0)),
       size_bytes: parseInt(fileInfo.size || 0),
-      proxy_url: data,
+      proxy_url: fileInfo,
     };
   } catch (error) {
     console.error("Error in getFileInfo:", error.message);
